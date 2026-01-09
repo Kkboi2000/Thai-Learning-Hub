@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Thai Learning Hub</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@500;600;700&family=Sarabun:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Sarabun', system-ui, -apple-system, BlinkMacSystemFont;
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #0A1F3F 0%, #051024 100%);
+      color: #f0f0f0;
+      overflow: hidden;
+    }
+
+    body::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: url('https://images.unsplash.com/photo-1519456264917-42d0aa2e0625?ixlib=rb-4.0.3&auto=format&fit=crop&q=80') no-repeat center center/cover;
+      opacity: 0.15;
+      z-index: -1;
+    }
+
+    .container {
+      text-align: center;
+      max-width: 420px;
+      width: 90%;
+      padding: 2.5rem 1.5rem;
+      background: rgba(10, 20, 40, 0.65);
+      border-radius: 24px;
+      backdrop-filter: blur(12px);
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+    }
+
+    h1 {
+      font-family: 'Prompt', sans-serif;
+      font-size: 2.52rem; /* Reduced by 10% from 2.8rem */
+      margin-bottom: 0.3rem;
+      background: linear-gradient(90deg, #FFD700, #FFA500);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 0 2px 10px rgba(255, 215, 0, 0.2);
+    }
+
+    p {
+      color: #b0c4ff;
+      margin-bottom: 2.5rem;
+      font-size: 1.1rem;
+    }
+
+    .buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.8rem;
+      text-decoration: none;
+      padding: 1.08rem; /* Reduced by 10% from 1.2rem */
+      border-radius: 16px;
+      font-size: 1.125rem; /* Reduced by 10% from 1.25rem */
+      font-weight: 600;
+      color: white;
+      background: #0D2A55;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+      transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .button::before {
+      content: '';
+      position: absolute;
+      top: 0; left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.15), transparent);
+      transition: left 0.6s;
+    }
+
+    .button:hover {
+      transform: translateY(-6px) scale(1.03);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+    }
+
+    .button:hover::before {
+      left: 100%;
+    }
+
+    .button:active {
+      transform: translateY(-2px) scale(1.01);
+    }
+
+    .emoji {
+      font-size: 1.62rem; /* Reduced by 10% from 1.8rem */
+    }
+
+    /* Vibrant individual gradients */
+    .tone    { background: linear-gradient(135deg, #1E3A8A, #3B82F6); }
+    .time    { background: linear-gradient(135deg, #0F766E, #14B8A6); }
+    .lessons { background: linear-gradient(135deg, #7C3AED, #A78BFA); }
+    .test    { background: linear-gradient(135deg, #DC2626, #F87171); }
+
+    .demo-version {
+      margin-top: 1.8rem;
+      font-size: 0.9rem;
+      color: #8899bb;
+      opacity: 0.8;
+    }
+
+    footer {
+      margin-top: 1.8rem;
+      font-size: 0.81rem; /* Reduced by 10% from 0.9rem */
+      color: #8899bb;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Thai Learning Hub</h1>
+    <p>Tools by Kru Krit</p>
+    <div class="buttons">
+      <a class="button tone" href="https://kkboi2000.github.io/ThaiTone101/">
+        <span class="emoji">🎵</span> Thai Tones
+      </a>
+      <a class="button time" href="https://kkboi2000.github.io/Thaitime/">
+        <span class="emoji">⏰</span> Thai Time
+      </a>
+      <a class="button lessons" href="https://kkboi2000.github.io/Thailessonmaterial/">
+        <span class="emoji">📘</span> Lessons
+      </a>
+      <a class="button test" href="https://kkboi2000.github.io/Thai-Quize/">
+        <span class="emoji">📝</span> Test
+      </a>
+    </div>
+    <div class="demo-version">demo version 1.0</div>
+    <footer>
+      Let's master Thai together! 🚀
+    </footer>
+  </div>
+</body>
+</html>
